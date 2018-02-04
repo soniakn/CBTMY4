@@ -25,6 +25,7 @@ void launch()
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://google.com");
 		Assert.assertEquals(true, driver.getTitle().contains("Google"));
+		System.out.println("hello");
 		
 	
 //	} catch (MalformedURLException e) {
