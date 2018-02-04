@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class New {
@@ -23,6 +24,8 @@ void launch()
 		System.setProperty("webdriver.chrome.driver", "./Drivers/c.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://google.com");
+		Assert.assertEquals(true, driver.getTitle().contains("Google"));
+		
 	
 //	} catch (MalformedURLException e) {
 //		// TODO Auto-generated catch block
